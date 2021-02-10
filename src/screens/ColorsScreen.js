@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { View, StyleSheet, Button } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
+import { View, StyleSheet, Button, FlatList } from "react-native";
 
-const ColorScreen = () => {
+const ColorsScreen = () => {
 
   const [colors, setColors] = useState([])
 
@@ -46,4 +45,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default ColorScreen;
+export default ColorsScreen;
