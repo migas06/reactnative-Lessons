@@ -10,7 +10,8 @@ import ColorsScreen from './src/screens/ColorsScreen'
 import SquareColorScreen from './src/screens/SquareColorScreen'
 import EditTextScreen from './src/screens/EditTextScreen'
 import BoxScreen from './src/screens/BoxScreen'
-
+import RestaurantApp from './src/restaurantApp/screens/RestaurantHome'
+import SearchComponent from './src/restaurantApp/components/SearchComponent'
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
@@ -21,7 +22,9 @@ const navigator = createStackNavigator(
     Colors: ColorsScreen,
     Square: SquareColorScreen,
     EditText: EditTextScreen,
-    Box : BoxScreen
+    Box : BoxScreen,
+    RestaurantApp: RestaurantApp,
+    SearchComponent: SearchComponent,
   },
   {
     initialRouteName: 'Home',

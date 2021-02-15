@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
         margin: 15,
         fontSize: 12,
         borderColor: 'white',
-        borderWidth: 1
+        borderWidth: 1, 
+        padding: 20
     }
 });
 

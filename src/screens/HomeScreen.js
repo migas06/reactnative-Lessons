@@ -6,6 +6,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View>
       <Button
+        style={styles.button}
         onPress={() => navigation.navigate('Component')}
         title="Go to Components DEMO"
       />
@@ -46,6 +47,11 @@ const HomeScreen = ({ navigation }) => {
         title='Go to Box Screen'
       />
 
+      <Button
+        onPress={() => navigation.navigate('RestaurantApp')}
+        title='Go to RestaurantApp'
+      />
+
     </View>
   );
 };
@@ -57,6 +63,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
+    justifyContent: 'space-between',
     marginTop: 30,
     fontSize: 70
   }
