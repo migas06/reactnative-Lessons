@@ -27,10 +27,10 @@ const styles = StyleSheet.create({
 
     searchBarStyle: {
         backgroundColor: '#F0EEEE',
-        margin: 16,
         height: 50,
         borderRadius: 5,
         flexDirection: "row",
+        marginBottom: 5
     },
 
     textInput: {

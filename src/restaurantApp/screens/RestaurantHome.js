@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import SearchComponent from '../components/SearchComponent';
 
-const ERROR_MSG = "Something went wrong"
+const ERROR_MSG = "Something went wrong";
 
 const RestaurantHome = () => {
     const [filterText, setFilterText] = useState("");
@@ -14,14 +14,14 @@ const RestaurantHome = () => {
         setResults([]);
     }
 
-    const searchAPI = () => {
+    const searchAPI = (location) => {
 
         setErrorMsg("");
 
-        fetch(`https://api.yelp.com/v3/businesses/search?location=porto?limit=50`,
+        fetch(`https://api.yelp.com/v3/businesses/search?location=${location}`,
             {
                 headers: new Headers({
-                    'Auhorization': 'Bearer ikf5JI7oPz_CGvcsRiYk7U6bsV0K5YL9bZWGNCwLPgEBrVuLSwfRReuUABHgwrCeK-woO9Tm4EQY53j1c-zAfu9HNOwNqJhJR0E3CwXdFmyPeXyks7YNrokBSs4qYHYx'
+                    'Authorization': 'Bearer ikf5JI7oPz_CGvcsRiYk7U6bsV0K5YL9bZWGNCwLPgEBrVuLSwfRReuUABHgwrCeK-woO9Tm4EQY53j1c-zAfu9HNOwNqJhJR0E3CwXdFmyPeXyks7YNrokBSs4qYHYx'
                 })
             })
             .then(res => res.json())
@@ -41,7 +41,7 @@ const RestaurantHome = () => {
             <SearchComponent
                 filterText={filterText}
                 setFilterText={text => setFilterText(text)}
-                onSubmit={() => searchAPI()}
+                onSubmit={() => searchAPI(filterText)}
             />
 
             {errorMsg ? <Text style={styles.errorMsgStyle}>{errorMsg}</Text> : null}
@@ -53,7 +53,8 @@ const RestaurantHome = () => {
 const styles = StyleSheet.create({
     backgroundStyle: {
         backgroundColor: "#fff",
-        flex: 1
+        flex: 1,
+        padding: 16
     },
 
     errorMsgStyle: {
