@@ -12,6 +12,8 @@ import EditTextScreen from './src/screens/EditTextScreen'
 import BoxScreen from './src/screens/BoxScreen'
 import RestaurantApp from './src/restaurantApp/screens/RestaurantHome'
 import SearchComponent from './src/restaurantApp/components/SearchComponent'
+import ResultsDetailScreen from './src/restaurantApp/screens/ResultsDetailScreen'
+
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
@@ -25,6 +27,7 @@ const navigator = createStackNavigator(
     Box : BoxScreen,
     RestaurantApp: RestaurantApp,
     SearchComponent: SearchComponent,
+    ResultsDetailScreen: ResultsDetailScreen
   },
   {
     initialRouteName: 'Home',
